@@ -77,43 +77,43 @@ const App = () => {
       title: "Web Development",
       description:
         "Modern, responsive websites to elevate your online presence.",
-      image: serviceImages[0],
+      image: serviceImages[1],
     },
     {
       title: "Software Development",
       description: "Comprehensive software solutions for all platforms.",
-      image: serviceImages[0],
+      image: serviceImages[2],
     },
     {
       title: "Graphic Designing",
       description: "Creative graphics that captivate your audience.",
-      image: serviceImages[0],
+      image: serviceImages[3],
     },
     {
       title: "UI/UX Design",
       description:
         "Intuitive and engaging user interface and experience designs.",
-      image: serviceImages[0],
+      image: serviceImages[4],
     },
     {
       title: "Animation",
       description: "High-quality animations to bring your ideas to life.",
-      image: serviceImages[0],
+      image: serviceImages[5],
     },
     {
       title: "VFX",
       description: "Stunning visual effects for impactful storytelling.",
-      image: serviceImages[0],
+      image: serviceImages[6],
     },
     {
       title: "Film Shoot / Ad Shoot",
       description: "Professional shoots for films and advertisements.",
-      image: serviceImages[0],
+      image: serviceImages[7],
     },
     {
       title: "Video Editing",
       description: "Professional shoots for films and advertisements.",
-      image: serviceImages[0],
+      image: serviceImages[8],
     },
   ];
 
@@ -130,7 +130,7 @@ const App = () => {
               alt="DS Studios Logo"
               className="navbar-logo me-2"
             />
-            <h1 className="site-title mb-0">D.S. STUDIOS</h1>
+            <h1 className="site-title mb-0">DS STUDIOS</h1>
           </div>
           <button
             className="navbar-toggler"
@@ -195,7 +195,7 @@ const App = () => {
           <h2 className="section-title text-center mb-4">About Us</h2>
           <div className="section-content text-justify">
             <p className="section-text">
-              Welcome to <strong>D.S. STUDIOS</strong>, where creativity meets
+              Welcome to <strong>DS STUDIOS</strong>, where creativity meets
               innovation!
             </p>
             <p className="section-text">
@@ -209,7 +209,7 @@ const App = () => {
             <p className="section-text">
               From app development to graphic design, animations to film shoots,
               our team of talented professionals works tirelessly to bring your
-              ideas to life. at D.S. STUDIOS, we don’t just create projects; we
+              ideas to life. at DS STUDIOS, we don’t just create projects; we
               create memorable experiences tailored to your vision and goals.
             </p>
 
@@ -227,8 +227,8 @@ const App = () => {
           <h2 className="section-title">Vision & Mission</h2>
           <p className="section-text">
             Our vision is to redefine creativity and establish new benchmarks in
-            innovation and quality across all projects. at D.S. STUDIOS, we aim
-            to create a legacy of exceptional storytelling, artistry, and
+            innovation and quality across all projects. at DS STUDIOS, we aim to
+            create a legacy of exceptional storytelling, artistry, and
             technology that transforms the way people experience content and
             creativity.
           </p>
@@ -395,8 +395,7 @@ const App = () => {
           </div>
           <div className="text-center last">
             <p className="mb-0">
-              &copy; {new Date().getFullYear()} D.S. STUDIOS. All rights
-              reserved.
+              &copy; {new Date().getFullYear()} DS STUDIOS. All rights reserved.
             </p>
           </div>
         </div>

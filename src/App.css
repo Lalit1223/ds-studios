@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: transparent; /* Neutral background to avoid conflicts */
   color: #000000;
+  overflow-x: hidden;
 }
 
 /* Header Styles */
@@ -52,8 +53,8 @@ body {
 /* About Us Section */
 /* About Section Background */
 .about-section {
-  height: 80vh;
-  background-image: url('./assets/2.jpg'); /*3,6,9,10 Replace with your image path */
+  height: 95vh;
+  background-image: url('./assets/7.jpg'); /*3,6,9,10 Replace with your image path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -128,13 +129,13 @@ body {
 
 .banner-image {
   width: 100%;
-  height: auto; /* Maintains aspect ratio */
-  object-fit: cover; /* Ensures the image fits nicely */
+  height: 50vh; /* Maintains aspect ratio */
+  object-fit: contain; /* Ensures the image fits nicely */
   display: block;
 }
 
 .banner-image:hover{
-  transform: scale(1.05); /* Enlarges the element */
+  transform: scale(1.1); /* Enlarges the element */
   transition: transform 0.3s ease; /* Smooth transition */
 }
 
