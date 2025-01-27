@@ -1,0 +1,405 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: transparent; /* Neutral background to avoid conflicts */
+  color: #000000;
+}
+
+/* Header Styles */
+.header {
+  background-color: white;
+  color: #8B0000 ;
+  z-index: 1;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: auto;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  color: #8B0000;
+}
+
+.nav-link {
+  color: #8B0000;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #0aece1;
+}
+
+/* Section Styles */
+.section-title {
+  color: #8B0000;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.section-text {
+  text-align: center;
+  color: #000000;
+  font-size: larger;
+
+  
+}
+
+/* About Us Section */
+/* About Section Background */
+.about-section {
+  height: 80vh;
+  background-image: url('./assets/2.jpg'); /*3,6,9,10 Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  color: white;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+.about-section .section-text {
+  text-align: center;
+  color: #AEEEEE ;
+}
+
+.about-section .section-title {
+  margin-top: 30px;
+  /* color: #000; */
+
+}
+
+
+
+/* Gradient Overlay */
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+/* Text Styling */
+.about-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Background Animation */
+@keyframes backgroundZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.about-section {
+  animation: backgroundZoom 10s infinite alternate ease-in-out;
+}
+
+/* Vision & Mission Section *//* Vision & Mission Section */
+.vision-mission-section {
+  background-color: #FFFF00; /* Yellow background for the entire section */
+  padding: 0;
+  margin: 0;
+}
+
+/* Ensure padding below the banner */
+.vision-mission-section .banner-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding-bottom: 50px; /* Add space below the image */
+}
+
+.banner-image {
+  width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image fits nicely */
+  display: block;
+}
+
+.banner-image:hover{
+  transform: scale(1.05); /* Enlarges the element */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Services Section */
+#services {
+  background-color: #F5F5F5; /* Consistent light gray background */
+  padding: 2rem 0;
+}
+
+.service-card {
+  max-width: 300px;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: #8B0000;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.card-text {
+  color: #000000;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Clients Section */
+/* Ticker Container */
+.ticker {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  white-space: nowrap;
+  /* background-color: #fafa0728; */
+}
+
+/* Ticker Content */
+.ticker-content {
+  display: inline-flex;
+  animation: ticker-scroll 25s linear infinite; /* Faster animation duration */
+  will-change: transform;
+}
+
+/* Duplicate the ticker content to create a seamless loop */
+.ticker-content::after {
+  content: "";
+  display: inline-flex;
+}
+
+/* Ticker Item */
+.ticker-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 40px; /* Space between items */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Client Logo Styling */
+.client-logo {
+  max-width: 150px; /* Adjust size */
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.client-logo:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Client Name Styling */
+.client-name {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  margin-top: 10px;
+  min-height: 40px; /* Uniform alignment */
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Seamless Ticker Scroll Animation */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .client-logo {
+    max-width: 100px;
+    height: 80px;
+  }
+
+  .client-name {
+    font-size: 0.9rem;
+  }
+
+  .ticker-item {
+    margin: 0 20px; /* Reduce spacing */
+  }
+}
+
+
+
+/* Workfolio Section */
+/* Workfolio Section */
+.workfolio-section {
+  background-color: #f8f9fa; /* Light background */
+  padding: 3rem 1rem; /* Section padding */
+}
+
+
+/* Card Styling */
+.project-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures the image fits nicely */
+  border-bottom: 3px solid #007bff; /* Accent color */
+}
+
+/* Card Body */
+.card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #007bff; /* Accent color */
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* View Project Button */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 150px; /* Reduce image height on smaller screens */
+  }
+
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+/* Connect Section */
+.connect-section {
+  background-color: #FFFF00; /* Bright yellow for engagement */
+  padding: 2rem 0;
+}
+
+.iframe-container {
+  position: relative;
+  width: 50%;
+  height: 0;
+  padding-bottom: 60%;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #8a0404; /* Dark gray for softer contrast */
+  color: #FFFFFF;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-text {
+  color: #CCCCCC; /* Lighter gray for text contrast */
+  margin: 0.25rem 0;
+}
+
+.footer-link {
+  color: #FFFF00;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.last{
+  opacity: 0.3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .text-md-end {
+    text-align: center !important;
+  }
+}
