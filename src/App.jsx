@@ -3,28 +3,36 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import banner from "./assets/new.png";
+import banner from "./assets/new.jpeg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import image0 from "./assets/0.jpg";
+import image1 from "./assets/1.jpg";
+import image2 from "./assets/2.jpg";
+import image3 from "./assets/3.jpg";
+import image4 from "./assets/4.jpg";
+import image5 from "./assets/5.jpg";
+import image6 from "./assets/6.jpg";
+import image7 from "./assets/7.jpg";
+import image8 from "./assets/8.jpg";
+import client1 from "./assets/c1.jpeg";
+import client2 from "./assets/c2.jpeg";
+import client3 from "./assets/c3.jpeg";
+import client4 from "./assets/c4.jpeg";
+import client5 from "./assets/c5.jpeg";
+import client6 from "./assets/c6.jpeg";
+import client7 from "./assets/c7.jpeg";
+import client8 from "./assets/c8.jpeg";
+import client9 from "./assets/c9.jpeg";
+import client10 from "./assets/c10.jpeg";
+import client11 from "./assets/c11.jpeg";
+import client12 from "./assets/c12.jpeg";
+import client13 from "./assets/c13.jpeg";
+import client14 from "./assets/c14.jpeg";
 
 import "./App.css";
-import {
-  serviceImages,
-  clientLogos,
-  workfolioImages,
-  logo,
-} from "./imageLoader";
+import logo from "./assets/logo.svg";
 
 const App = () => {
-  // Settings for react-slick carousel
-  const sliderSettings = {
-    dots: true, // Enables dots for navigation
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Adjust number of slides visible
-    slidesToScroll: 1,
-    arrows: false, // Disables navigation arrows
-  };
-
   // workfoli chnages when ask to implement
   // const workfolioProjects = [
   //   {
@@ -71,53 +79,68 @@ const App = () => {
     {
       title: "App Development",
       description: "Custom app development tailored to your needs.",
-      image: serviceImages[0],
+      image: image0,
     },
     {
       title: "Web Development",
       description:
         "Modern, responsive websites to elevate your online presence.",
-      image: serviceImages[1],
+      image: image1,
     },
     {
       title: "Software Development",
       description: "Comprehensive software solutions for all platforms.",
-      image: serviceImages[2],
+      image: image2,
     },
     {
       title: "Graphic Designing",
       description: "Creative graphics that captivate your audience.",
-      image: serviceImages[3],
+      image: image3,
     },
     {
       title: "UI/UX Design",
       description:
         "Intuitive and engaging user interface and experience designs.",
-      image: serviceImages[4],
+      image: image4,
     },
     {
       title: "Animation",
       description: "High-quality animations to bring your ideas to life.",
-      image: serviceImages[5],
+      image: image5,
     },
     {
       title: "VFX",
       description: "Stunning visual effects for impactful storytelling.",
-      image: serviceImages[6],
+      image: image6,
     },
     {
       title: "Film Shoot / Ad Shoot",
       description: "Professional shoots for films and advertisements.",
-      image: serviceImages[7],
+      image: image7,
     },
     {
       title: "Video Editing",
-      description: "Professional shoots for films and advertisements.",
-      image: serviceImages[8],
+      description: "Professional Video Editing .",
+      image: image8,
     },
   ];
 
-  const clientNames = ["Client 1", "Client 2", "Client 3", "Client 4"];
+  const clientLogos = [
+    client1,
+    client2,
+    client3,
+    client4,
+    client5,
+    client6,
+    client7,
+    client8,
+    client9,
+    client10,
+    client11,
+    client12,
+    client13,
+    client14,
+  ];
 
   return (
     <div>
@@ -223,11 +246,11 @@ const App = () => {
 
       {/* Vision & Mission Section */}
       <section id="vision-mission" className="vision-mission-section">
-        <div className="container py-5">
+        <div className="container">
           <h2 className="section-title">Vision & Mission</h2>
           <p className="section-text">
             Our vision is to redefine creativity and establish new benchmarks in
-            innovation and quality across all projects. at DS STUDIOS, we aim to
+            innovation and quality across all projects. At DS STUDIOS, we aim to
             create a legacy of exceptional storytelling, artistry, and
             technology that transforms the way people experience content and
             creativity.
@@ -244,14 +267,14 @@ const App = () => {
             bring fresh ideas and perspectives to every project, ensuring every
             story we tell is unique and impactful.
           </p>
-        </div>
-        {/* Banner Image */}
-        <div className="banner-container">
-          <img
-            src={banner} /* Replace with your image path */
-            alt="Vision & Mission Banner"
-            className="banner-image"
-          />
+          <div className="banner-container">
+            <LazyLoadImage
+              src={banner}
+              alt="Vision & Mission Banner"
+              className="banner-image"
+              effect="blur"
+            />
+          </div>
         </div>
       </section>
 
@@ -266,11 +289,13 @@ const App = () => {
                 key={index}
               >
                 <div className="card service-card">
-                  <img
+                  <LazyLoadImage
                     src={service.image}
                     alt={service.title}
                     className="card-img-top service-image"
+                    effect="blur"
                   />
+
                   <div className="card-body">
                     <h5 className="card-title">{service.title}</h5>
                     <p className="card-text">{service.description}</p>
@@ -333,6 +358,7 @@ const App = () => {
                     src={logo}
                     alt={`Client ${index + 1}`}
                     className="client-logo"
+                    // effect="blur"
                   />
                 </div>
               ))}
@@ -352,8 +378,8 @@ const App = () => {
       </section>
 
       {/* Connect Section */}
-      <section id="connect" className="py-5 bg-light">
-        <div className="iframe-container">
+      <section id="connect" class="connect-section py-5 bg-light">
+        <div class="iframe-container">
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSc2ZKrHqeEfL5aabLCrahcrM2B_sPgbqws-n4yvS94LNDROvA/viewform?embedded=true"
             title="Connect Form"
