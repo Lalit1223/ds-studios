@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: transparent; /* Neutral background */
+  color: #000000;
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* Smooth scrolling for all sections */
+}
+
+.section {
+  padding: 3rem 1rem; /* Consistent section padding */
+  text-align: center;
+}
+
+.section-title {
+  color: #8B0000;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.section-text {
+  text-align: center;
+  color: #000000;
+  font-size: larger;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.about-section {
+    height: 95vh;
+    background-image: url('../assets/10.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    position: relative;
+    color: white;
+    padding: 50px 0;
+    animation: backgroundZoom 10s infinite alternate ease-in-out;
+    overflow: hidden;
+  }
+  
+  .about-section .section-text {
+    color: #AEEEEE;
+  }
+  
+  .about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+  }
+  
+  .about-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  @keyframes backgroundZoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

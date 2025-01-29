@@ -1,0 +1,43 @@
+#services {
+  perspective: 1000px;
+}
+
+  .service-card {
+    max-width: 300px;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .service-card {
+    will-change: transform; /* Hint to browser */
+  }
+  
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Corrected box-shadow */
+    }
+  
+    .service-image {
+      width: 100%;
+      height: 200px; /* Ensures all images have the same height */
+      object-fit: cover; /* Fills container without empty spaces */
+    }
+    
+  
+  .card-title {
+    color: #8B0000;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .card-text {
+    color: #000000;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  

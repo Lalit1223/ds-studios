@@ -1,0 +1,38 @@
+.vision-mission-section {
+    background-color: #FFFF00;
+    padding: 50px 15px;
+    margin: 0;
+    z-index: 2;
+  }
+  
+  .banner-container {
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  .banner-image {
+    width: auto;
+    height: 50vh;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .vision-mission-section .section-title {
+      font-size: 1.75rem;
+      z-index: 2;
+
+    }
+  
+    .vision-mission-section .section-text {
+      font-size: 1rem;
+    }
+  
+    .banner-image {
+      height: 40vh;
+    }
+  }
+  

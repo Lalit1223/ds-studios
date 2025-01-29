@@ -1,0 +1,38 @@
+.footer {
+    background-color: #8a0404;
+    color: #FFFFFF;
+  }
+  
+  .footer-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .footer-text {
+    color: #CCCCCC;
+    margin: 0.25rem 0;
+  }
+  
+  .footer-link {
+    color: #FFFF00;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  .last {
+    opacity: 0.3;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      text-align: center;
+    }
+  
+    .text-md-end {
+      text-align: center !important;
+    }
+  }
+  
